@@ -1,0 +1,350 @@
+{% load static%}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand"><img src="{% static 'logos/logo.svg' %}" alt=""></a>
+            <form class="d-flex " role="search" style=" position: absolute; left :250px">
+                <input class="form-control me-2 w-70% my-5 " type="search"
+                    placeholder="Search for Product, Brand and more" aria-label="Search"
+                    style="width: 750px; font-size: 18px; height: 45px;">
+
+                <div class="container fs.1 m-5 ">
+                    <a href="" style="color: black; text-decoration:none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
+                            class="bi bi-person-circle m-3 " viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                            <path fill-rule="evenodd"
+                                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                        </svg>Login</a>
+                    <a href="" style="color: black; text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="26" height="26" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16"
+                            style="margin: 10px 10px; margin-left:30px;">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                        </svg>Cart</a>
+                    <a href="" style="color: black; text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="26" height="26" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16"
+                            style="margin: 10px 10px; margin-left:30px;">
+                            <path
+                                d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h12V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5m2 .5a.5.5 0 0 1 .5.5V13h8V9.5a.5.5 0 0 1 1 0V13a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5a.5.5 0 0 1 .5-.5" />
+                        </svg>Become a Seller</a>
+                    <button style="border: none; background-color: transparent;"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="25" height="25" fill="currentColor" class="bi bi-three-dots-vertical"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        </svg></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+    </nav>
+    <!-- this is top main product bar starts here -->
+    <div
+        style="position: absolute; width: 100%; height: 110%; background-color: rgb(239, 232, 232); ">
+        <div class=" position-relative   top-2 my-2 bg-white d-flex justify-content-evenly py-1  "
+            style="width: 98%; margin: auto; ">
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
+                    src="./catagoy/appliances.webp" alt="">
+                <p>Appliances</p>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
+                    src="./catagoy/electronic.webp" alt="">
+                <p>Electronic</p>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/fashion.webp"
+                    alt="">
+                <p>Fashion</p>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/grocery.webp"
+                    alt="">
+                <p>Grocery</p>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
+                    src="./catagoy/home and furniture.webp" alt="">
+                <p>Home and <br>Furniture</p>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/mobile.webp"
+                    alt="">
+                <P>Mobile</P>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/toys.webp"
+                    alt="">
+                <p>Toys</p>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/travel.webp"
+                    alt="">
+                <p>Travel</p>
+            </a>
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
+                    src="./catagoy/two wheels.webp" alt="">
+                <p>Two Wheels</p>
+            </a>
+        </div>
+        <!-- top  product bar ends here -->
+        <!-- first auto carousel starts here or auto slider bar -->
+        <div id="carouselExampleAutoplaying" class="carousel slide " style="width: 98%; margin: auto;"
+            data-bs-ride="carousel">
+            <div class="carousel-inner ">
+                <div class="carousel-item active">
+                    <a href=""><img src="./banner/desktop.webp" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img src="./banner/flight.webp" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img src="./banner/flight1.webp" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img src="./banner/fight2.webp" class="d-block w-100" alt="..."></a>
+                </div>
+                <div class="carousel-item">
+                    <a href=""><img src="./banner/mobile.webp" class="d-block w-100" alt="..."></a>
+                </div>
+            </div>
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- auto carousel ends here or auto slide bar ends here -->
+        <!-- carousel  -->
+        <!-- product slider bar starts here -->
+        <div class="bg-white w-75 p-3 m-2 h-auto ">
+            <h2 class="text-center">Product slider</h2>
+            <hr>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row text-center  ">
+                            <div class="col-3 border border-1"><a href=""><img src="./banner2/p1.png" alt="">
+                                    <p>Top mirrorless Camera <br> Shop NOW</p>
+                                </a></div>
+                            <div class="col-3 border border-1  "><a href=""><img src="./banner2/p2.png" alt="">
+                                    <p>Printers <br><span>From ₹3999</span></p>
+                                </a>
+                            </div>
+                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p3.png" alt="">
+                                    <p>Premium PowerBank <br>Shop Now</p>
+                                </a></div>
+                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p4.png" alt="">
+                                    <p>Best of Shavers <br><span>From ₹1649</span></p>
+                                </a></div>
+                        </div>
+                    </div>
+                    <div class="carousel-item ">
+                        <div class="row ">
+                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p5.png" alt=""></a></div>
+                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p6.png" alt=""></a></div>
+                            <div class="col-3 border border-1"><a href=""><img src="./banner2/p7.png" alt=""></a></div>
+                            <div class="col-3 border border-1"><a href=""><img src="./banner2/p8.png" alt=""></a></div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <!-- product slider bar ends here -->
+        </div>
+        <!-- this below image is second banner photo  -->
+        <img src="./banner2/p9.webp" alt=""
+            style="height: 350px; width: 300px; float: right; position:  relative; bottom: 380px; right:15px ;">
+    </div>
+    <!-- page2 stats here -->
+    <!-- second product slider bar starts from here -->
+    <div
+        style="position: absolute; top: 120%; width: 98%; height: 150%; background-color: rgb(250, 250, 250); margin-left: 15px;">
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row m-2 d-flex justify-content-evenly text-center">
+                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p1.png" alt="">
+                                <p>Top Selling Stationery<br>Shop NOW</p>
+                            </a></div>
+                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p2.webp" alt="">
+                                <p>Geared Cycles<br>Up to 70% Off</p>
+                            </a></div>
+                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p3.webp" alt="">
+                                <p>Academic Books<br>under ₹299</p>
+                            </a></div>
+                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p4.webp" alt="">
+                                <p>Microphones<br>Up to 70% Off</p>
+                            </a></div>
+                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p5.webp" alt="">
+                                <p>Remote Control Toys<br>Up to 80% Off</p>
+                            </a></div>
+                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p6.webp" alt="">
+                                <p>Best Of Action Toys<br>Up to 70% Off</p>
+                            </a></div>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!-- second product slider bar ends here -->
+        <hr>
+        <div class="w-50 ">
+            <h2 class="p-3">Shop for Your Love</h2>
+            <div class="container  ">
+                <div class="col d-flex flex-wrap m-8" style="overflow: hidden;">
+                    <div class="row border border-1 m-2"><a href=""><img src="./product/product1/p1.webp" alt=""
+                                style="width: 200px; height: 250px;">
+                            <p>Men's Sport shoes <br><span>Grab Now</span></p>
+                        </a></div>
+                    <div class="row border border-1 m-2"><a href=""><img src="./product/product1/p2.webp" alt=""
+                                style="width: 200px; height: 250px;">
+                            <p>Wrist Watch <br><span>Min. 50% Off</span></p>
+                        </a></div>
+                    <div class="row border border-1 m-2"><a href=""><img src="./product/product1/p3.webp" alt=""
+                                style="width: 200px; height: 250px;">
+                            <p>Men's Casual Shoes <br><span>Min. 60% Off</span></p>
+                        </a></div>
+                    <div class="row border border-1 m-2"><a href=""><img src="./product/product1/p4.webp" alt=""
+                                style="width: 200px; height: 250px;">
+                            <p>Men's T-Shirt's <br><span>Min. 90% Off</span></p>
+                        </a></div>
+                </div>
+            </div>
+        </div>
+        <img src="./product/product1/banner.png" alt=""
+            style="width: 950px; height: 620px; float: right; position: relative; bottom: 650px; ">
+    </div>
+    <!-- 2nd page ends here -->
+    <!-- 3rd page starts here -->
+
+
+    <!-- footer part starts here -->
+    <div class="container position-absolute " style="top: 270%; margin-left: 100px; ">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>About</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Contact Us</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About Us</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Careers</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Flipkart
+                                Stories</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Press</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Corporate
+                                Information</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Group Companies</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Myntra</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Flipkart
+                                Wholesale</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cleartrip</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shopsy</a></li>
+
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Help</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Payments</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shipping</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cancellation &
+                                Returns</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Report
+                                Infringement</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Consumer Policy</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cancellation &
+                                Returns</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms Of Use</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Security</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pivacy</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sitemap</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Grievance
+                                Redressal</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">EPR
+                                Compliance</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                    <p>© 2023 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                          </svg></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                          </svg></a></li>
+                        <li class="ms-3"><a class="link-body-emphasis" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                          </svg></a></li>
+                    </ul>
+                </div>
+        </footer>
+    </div>
+</body>
+
+</html>
