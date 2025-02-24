@@ -1,4 +1,4 @@
-{% load static%}
+{% load static %}
 <!doctype html>
 <html lang="en">
 
@@ -31,14 +31,15 @@
                     style="width: 750px; font-size: 18px; height: 45px;">
 
                 <div class="container fs.1 m-5 ">
-                    <a href="" style="color: black; text-decoration:none;">
+                    <a href="{% url 'login' %}" style="color: black; text-decoration:none;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor"
                             class="bi bi-person-circle m-3 " viewBox="0 0 16 16">
                             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                             <path fill-rule="evenodd"
                                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                         </svg>Login</a>
-                    <a href="" style="color: black; text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg"
+                       
+                    <a href="{% url 'login' %}" style="color: black; text-decoration:none;"><svg xmlns="http://www.w3.org/2000/svg"
                             width="26" height="26" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16"
                             style="margin: 10px 10px; margin-left:30px;">
                             <path
@@ -73,39 +74,39 @@
         <div class=" position-relative   top-2 my-2 bg-white d-flex justify-content-evenly py-1  "
             style="width: 98%; margin: auto; ">
             <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
-                    src="./catagoy/appliances.webp" alt="">
+                    src="{{ MEDIA_URL }}category/appliances.webp" alt="">
                 <p>Appliances</p>
             </a>
             <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
-                    src="./catagoy/electronic.webp" alt="">
+                    src="{{ MEDIA_URL }}category/electronic.webp" alt="">
                 <p>Electronic</p>
             </a>
-            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/fashion.webp"
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="{{ MEDIA_URL }}category/fashion.webp"
                     alt="">
                 <p>Fashion</p>
             </a>
-            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/grocery.webp"
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="{{ MEDIA_URL }}category/grocery.webp"
                     alt="">
                 <p>Grocery</p>
             </a>
             <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
-                    src="./catagoy/home and furniture.webp" alt="">
+                    src="{{ MEDIA_URL }}category/home_and_furniture.webp" alt="">
                 <p>Home and <br>Furniture</p>
             </a>
-            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/mobile.webp"
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="{{ MEDIA_URL }}category/mobile.webp"
                     alt="">
                 <P>Mobile</P>
             </a>
-            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/toys.webp"
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="{{ MEDIA_URL }}category/toys.webp"
                     alt="">
                 <p>Toys</p>
             </a>
-            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="./catagoy/travel.webp"
+            <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img src="{{ MEDIA_URL }}category/travel.webp"
                     alt="">
                 <p>Travel</p>
             </a>
             <a href="" style="text-decoration: none; color: black; font-weight: bold;"><img
-                    src="./catagoy/two wheels.webp" alt="">
+                    src="{{ MEDIA_URL }}category/two_wheels.webp" alt="">
                 <p>Two Wheels</p>
             </a>
         </div>
@@ -115,22 +116,22 @@
             data-bs-ride="carousel">
             <div class="carousel-inner ">
                 <div class="carousel-item active">
-                    <a href=""><img src="./banner/desktop.webp" class="d-block w-100" alt="..."></a>
+                    <a href=""><img src="{{MEDIA_URL}}banner_images/banner.jfif" class="d-block w-100" alt="..."></a>
                 </div>
                 <div class="carousel-item">
-                    <a href=""><img src="./banner/flight.webp" class="d-block w-100" alt="..."></a>
+                    <a href=""><img src="{{MEDIA_URL}}banner_images/flight.webp" class="d-block w-100" alt="..."></a>
                 </div>
                 <div class="carousel-item">
-                    <a href=""><img src="./banner/flight1.webp" class="d-block w-100" alt="..."></a>
+                    <a href=""><img src="{{MEDIA_URL}}banner_images/flight1.webp" class="d-block w-100" alt="..."></a>
                 </div>
                 <div class="carousel-item">
-                    <a href=""><img src="./banner/fight2.webp" class="d-block w-100" alt="..."></a>
+                    <a href=""><img src="{{MEDIA_URL}}banner_images/flight2.webp" class="d-block w-100" alt="..."></a>
                 </div>
                 <div class="carousel-item">
-                    <a href=""><img src="./banner/mobile.webp" class="d-block w-100" alt="..."></a>
+                    <a href=""><img src="{{MEDIA_URL}}banner_images/mobile.webp" class="d-block w-100" alt="..."></a>
                 </div>
             </div>
-            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleAutoplaying"
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -151,30 +152,29 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="row text-center  ">
-                            <div class="col-3 border border-1"><a href=""><img src="./banner2/p1.png" alt="">
+                            <div class="col-3 border border-1"><a href=""><img src="{{MEDIA_URL}}banner_images/p1.png" alt="">
                                     <p>Top mirrorless Camera <br> Shop NOW</p>
                                 </a></div>
-                            <div class="col-3 border border-1  "><a href=""><img src="./banner2/p2.png" alt="">
+                            <div class="col-3 border border-1  "><a href=""><img src="{{MEDIA_URL}}banner_images/p2.png" alt="">
                                     <p>Printers <br><span>From ₹3999</span></p>
                                 </a>
                             </div>
-                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p3.png" alt="">
+                            <div class="col-3 border border-1 "><a href=""><img src={{MEDIA_URL}}banner_images/p3.png" alt="">
                                     <p>Premium PowerBank <br>Shop Now</p>
                                 </a></div>
-                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p4.png" alt="">
+                            <div class="col-3 border border-1 "><a href=""><img src="{{MEDIA_URL}}banner_images/p4.png" alt="">
                                     <p>Best of Shavers <br><span>From ₹1649</span></p>
                                 </a></div>
                         </div>
                     </div>
                     <div class="carousel-item ">
-                        <div class="row ">
-                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p5.png" alt=""></a></div>
-                            <div class="col-3 border border-1 "><a href=""><img src="./banner2/p6.png" alt=""></a></div>
-                            <div class="col-3 border border-1"><a href=""><img src="./banner2/p7.png" alt=""></a></div>
-                            <div class="col-3 border border-1"><a href=""><img src="./banner2/p8.png" alt=""></a></div>
+                        <div class="row">
+                            <div class="col-3 border border-1 "><a href=""><img src="{{MEDIA_URL}}banner_images/p5.png" alt=""></a></div>
+                            <div class="col-3 border border-1 "><a href=""><img src="{{MEDIA_URL}}banner_images/p6.png" alt=""></a></div>
+                            <div class="col-3 border border-1"><a href=""><img src="{{MEDIA_URL}}banner_images/p7.png" alt=""></a></div>
+                            <div class="col-3 border border-1"><a href=""><img src="{{MEDIA_URL}}banner_images/p8.png" alt=""></a></div>
                         </div>
                     </div>
-
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
                     data-bs-slide="prev">
@@ -190,7 +190,7 @@
             <!-- product slider bar ends here -->
         </div>
         <!-- this below image is second banner photo  -->
-        <img src="./banner2/p9.webp" alt=""
+        <img src="{{MEDIA_URL}}banner_images/p9.webp" alt=""
             style="height: 350px; width: 300px; float: right; position:  relative; bottom: 380px; right:15px ;">
     </div>
     <!-- page2 stats here -->
@@ -201,38 +201,29 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="row m-2 d-flex justify-content-evenly text-center">
-                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p1.png" alt="">
-                                <p>Top Selling Stationery<br>Shop NOW</p>
-                            </a></div>
-                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p2.webp" alt="">
-                                <p>Geared Cycles<br>Up to 70% Off</p>
-                            </a></div>
-                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p3.webp" alt="">
-                                <p>Academic Books<br>under ₹299</p>
-                            </a></div>
-                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p4.webp" alt="">
-                                <p>Microphones<br>Up to 70% Off</p>
-                            </a></div>
-                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p5.webp" alt="">
-                                <p>Remote Control Toys<br>Up to 80% Off</p>
-                            </a></div>
-                        <div class="col-auto border border-1 m-1"><a href=""><img src="./product/p6.webp" alt="">
-                                <p>Best Of Action Toys<br>Up to 70% Off</p>
-                            </a></div>
-
+                        {% for product in products %}
+                            <div class="col-auto border border-1 m-1">
+                                <a href="">
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    <p>{{ product.name }}<br>{{ product.description }}</p>
+                                </a>
+                            </div>
+                        {% endfor %}
                     </div>
+                    
                 </div>
 
-
             </div>
+        <div class="col-auto border border-1 m-1">
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <button class="col-auto border border-1 m-1" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
+        </div>
         </div>
         <!-- second product slider bar ends here -->
         <hr>
@@ -265,9 +256,8 @@
     <!-- 2nd page ends here -->
     <!-- 3rd page starts here -->
 
-
     <!-- footer part starts here -->
-    <div class="container position-absolute " style="top: 270%; margin-left: 100px; ">
+    <div class="container position-absolute" style="top: 270%; margin-left: 100px;">
         <footer class="py-5">
             <div class="row">
                 <div class="col-6 col-md-2 mb-3">
@@ -327,7 +317,6 @@
                     </ul>
 
                 </div>
-
 
                 <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                     <p>© 2023 Company, Inc. All rights reserved.</p>

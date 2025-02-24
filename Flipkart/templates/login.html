@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>login</head>
+    <body>
+        <form action="{% url 'login' %}" method="post">
+            {% csrf_token %}
+            Email:<input type="email" name="email">
+            password:<input type="password" name="password">
+            <input type="submit">
+        </form>
+        <p> Not registered?<a href="{% url 'signup'%}">signup</a></p>
+    </body>
+</html>
